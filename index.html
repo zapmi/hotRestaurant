@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>INDEX</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Hot Restaurant</h1>
+            <h3>We only have 5 tables! Book your seat before they all are gone!
+            </h3>
+            <hr>
+            <a href="/view"><button class="btn btn-danger btn-lg"><span class="fa fa-list"></span> View Tables</button></a>
+            <a href="/add"><button class="btn btn-danger btn-lg"><span class="fa fa-credit-card"></span> Make
+                    Reservation</button></a>
+
+        </div>
+       
+
+    <!-- <script type="text/javascript">
+
+        $.get("/api/people", function (data) {
+            for (var i = 0; i < data.length; i++) {
+                console.log(data[i]);
+                var listGroupItem = $("<li class='list-group-item'>");
+
+                listGroupItem.append($("<h2>").text("Name: " + data[i].name));
+                listGroupItem.append($("<h3>").text("Phone Number: " + data[i].phone_number));
+                listGroupItem.append($("<h3>").text("Email: " + data[i].email));
+                listGroupItem.append($("<h3>").text("ID: " + data[i].unique_id));
+
+                if (listGroupItem <= 5) {
+                    $("#current-section").append(listGroupItem);
+                }
+                else $("#waiting-section").append(listGroupItem);
+
+            }
+        });
+    </script> -->
+
+</body>
+
+</html>
+
