@@ -1,8 +1,7 @@
 // =============================================================
 var express = require("express");
 var path = require("path");
-var mysql = require("mysql");
-
+var apiCall = require("./api.js");
 
 var app = express();
 var PORT = process.env.PORT || 3000;
@@ -17,12 +16,26 @@ app.get("/", function (req, res) {
 });
 
 app.get("/add", function (req, res) {
+    res.sendFile(path.join(__dirname, "form.html"));
+});
+
+app.get("/view", function (req, res) {
     res.sendFile(path.join(__dirname, "tableRsvp.html"));
 });
 
-app.get("/api/characters", function (req, res) {
-    return res.json(characters);
-});
+app.get("/api/rsvp", function(req, res) {
+    
+    // console.log(rsvps);
+    var test = apiCall.displayExistingRsvps();
+    console.log(test);
+    return res.json();
+  });
+
+app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
+
+  
 
 
 
